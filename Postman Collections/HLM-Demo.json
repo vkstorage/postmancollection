@@ -1,0 +1,59 @@
+{
+  "info": {
+    "_postman_id": "56eacf0f-54eb-4c70-8b86-5d9015700f77",
+    "name": "HLM-Demo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetGroups",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "c77f7a5c-ebf8-41d7-86c3-de70b0128294",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "19e95b58-3090-4341-9c26-388c362459db",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://dev-totara.footprintmis.com/local/hlmapp/model.php?v=hlm_group&orgid=56184",
+          "protocol": "https",
+          "host": [
+            "dev-totara",
+            "footprintmis",
+            "com"
+          ],
+          "path": [
+            "local",
+            "hlmapp",
+            "model.php"
+          ],
+          "query": [
+            {
+              "key": "v",
+              "value": "hlm_group"
+            },
+            {
+              "key": "orgid",
+              "value": "56184"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
